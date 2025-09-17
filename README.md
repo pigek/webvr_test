@@ -1,1 +1,2 @@
-[texture](https://pigek.github.io/webvr_test/demoVR.html)
+[texture](https://pigek.github.io/webvr_test/texture.html)
+
