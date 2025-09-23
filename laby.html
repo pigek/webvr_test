@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity camera 
+          position="-1.5 1.6 2.7" 
+          look-controls 
+          wasd-controls>
+      </a-entity>
+
+
+      <a-assets>
+         <img id="Basilic" src="./asset/img/Basilic.jpg">
+         <img id="pigeon" src="./asset/img/pigeongovernmentdrones.png">
+          <img id="shrek" src="./asset/img/elsrheko.png">
+          <img id="grass" src="./asset/img/grass.png">
+          <img id="capi" src="./asset/img/capitalisme.png">
+      </a-assets>
+
+      <!-- formes -->
+       <!-- 6mursprincipaux -->
+      <a-plane src="#grass"
+        position="1.2 1 -2"  
+        material="side:double"
+        scale="0.4 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+       <a-plane src="#grass"
+        position="-1.2 1 -2"  
+        material="side:double"
+        scale="0.4 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+      <a-plane src="#grass"
+        position="0.4 1 2"  
+        material="side:double"
+        rotation="0 180 0" 
+        width="4" 
+        height="2" 
+        scale="0.8 1 1"
+        color="#68300">
+      </a-plane>
+
+       <a-plane src="#grass"
+        position="-2 1 0"   
+        material="side:double"
+        rotation="0 90 0" 
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+      <a-plane src="#grass"
+        position="2 1 0"    
+        material="side:double"
+        rotation="0 -90 0" 
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+
+       <!-- labyrinthe --> 
+        <!-- verticale--> 
+          <a-plane src="#shrek"
+        position="-0.4 1 -1.102"    
+        material="side:double"
+        rotation="0 90 0" 
+        scale="0.450 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+      <a-plane src="#shrek"
+        position="-1.0 1 -0.174"    
+        material="side:double"
+        rotation="0 90 0" 
+        scale="0.64 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+  
+
+        <a-plane src="#shrek"
+        position="1.235 1 0.661"    
+        material="side:double"
+        rotation="0 90 0" 
+        scale="0.220 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+       <a-plane src="#shrek"
+        position="0.432 1 -0.021"    
+        material="side:double"
+        rotation="0 90 0" 
+        scale="0.200 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+         <!-- horizontale --> 
+        <a-plane src="#shrek"
+        position="0.115 1 1.1"    
+        material="side:double"
+        rotation="0 180 0" 
+        scale="0.560 1 1"
+        width="4" 
+        height="2" 
+        color="#68300#">
+      </a-plane>
+
+      <a-plane src="#shrek"
+        position="1.212 1 -0.423"    
+        material="side:double"
+        rotation="0 00 0" 
+        scale="0.391 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+      <a-plane src="#capi"
+        position="1.617 1 0.229"    
+        material="side:double"
+        rotation="0 00 0" 
+        scale="0.190 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+       <a-plane src="#shrek"
+        position="0.008 1 -1.009"    
+        material="side:double"
+        rotation="0 00 0" 
+        scale="0.210 1 1"
+        width="4" 
+        height="2" 
+        color="#68300">
+      </a-plane>
+
+     
+
+      
+
+      <!-- environnement -->
+      <a-plane src="#grass"
+        position="0 0 0" 
+        rotation="-90 0 0" 
+        width="4" 
+        height="4" 
+        color="#7BC8A4">
+      </a-plane>
+
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
