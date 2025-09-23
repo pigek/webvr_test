@@ -1,2 +1,5 @@
-[texture](https://pigek.github.io/webvr_test/texture.html)
+[texture](./texture.html)
+
+[labyrinthe](./laby.html)
+
 
