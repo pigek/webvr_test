@@ -4,7 +4,8 @@
 
 [labyrinthe](./laby.html)
 
-[labyrinthe](./whatamess.html)
+[what-a-mess](./whatamess.html)
+
 
 
 
