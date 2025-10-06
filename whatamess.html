@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Caméra -->
+      <a-entity camera position="1 1 1" look-controls wasd-controls></a-entity>
+
+      <a-assets>
+        <!-- Texture -->
+        <img id="Basilic" src="./asset/img/laby1/grass.png">
+        <!-- Modèle 3D -->
+        <a-asset-item id="grass" src="./3Dmodels_aframe/whatamess/grass_vegitation_mix.glb"></a-asset-item>
+        <a-asset-item id="papillon" src="./3Dmodels_aframe/whatamess/blue_butterfly_3d_model.glb"></a-asset-item>
+      </a-assets>
+
+      <!--  Sol -->
+      <a-plane src="#Basilic" position="0 0 0" rotation="-90 0 0" width="3" height="3"material="side:double"></a-plane>
+      <a-entity gltf-model="#grass" scale="2 2 2" position="0 0 0" rotation="0 0 0"></a-entity>
+
+      <!-- Mur arrière -->
+      <a-plane src="#Basilic" position="0 1.5 -1.5" rotation="0 180 0" width="3" height="3"material="side:double"></a-plane>
+      <a-entity gltf-model="#grass" scale="2 2 2" position="0 1.5 -1.49" rotation="90 0 0"></a-entity>
+
+      <!-- Mur gauche -->
+      <a-plane src="#Basilic" position="-1.5 1.5 0" rotation="0 90 0" width="3" height="3"material="side:double"></a-plane>
+      <a-entity gltf-model="#grass" scale="2 2 2" position="-1.49 1.5 0" rotation="90 0 -90"material="side:double"></a-entity>
+
+      <!-- Mur droit -->
+      <a-plane src="#Basilic" position="1.5 1.5 0" rotation="0 -90 0" width="3" height="3"material="side:double"></a-plane>
+      <a-entity gltf-model="#grass" scale="2 2 2" position="1.49 1.5 0" rotation="90 0 90"></a-entity>
+
+      <!--  Mur droit -->
+      <a-plane src="#Basilic" position="0 2.971 0" rotation="-90 0 0" width="3" height="3"material="side:double"></a-plane>
+      <a-entity gltf-model="#grass" scale="2 2 2" position="-0.17 1.924 3.878" rotation="180 90 0"></a-entity>
+      <a-entity 
+      light="type: spot; color: #783efe; angle: 45; intensity: 2; distance: 10; decay: -9.410; position:0.102 -0.25 1.822; rotation:34.37 0 0"
+      position="-0.17 2 2.878"
+      rotation="-45 0 0">
+      </a-entity>
+      <a-entity gltf-model="#papillon" scale="1 1 1" position="0.544 1 0.878" rotation="-14.8 -37.4 0.870"></a-entity>
+      <a-entity gltf-model="#papillon" scale="1 1 1" position="0.544 0.33 -0.728" rotation="-14.8 61.88 0.870"></a-entity>
+      <a-entity gltf-model="#papillon" scale="0.5 0.5 0.5" position="-0.12 1 -0.728" rotation="-20.1 -64.9 -18.54"></a-entity>
+     <a-sky color="black"></a-sky>
+    </a-scene>
+  </body>
+</html>
