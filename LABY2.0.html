@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+   >
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.0/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+
+   
+  </head>
+
+  <body>
+    <a-scene >
+
+      <!-- Caméra -->
+      <a-entity camera look-controls wasd-controls="acceleration:20" position="0 1 0"></a-entity>
+
+      <a-assets>
+        <!-- Textures -->
+        <img id="wt8" src="./asset/img/doors/walltexture8.png">
+        <img id="wrong" src="./asset/img/doors/wrongw.png">
+        <img id="dead" src="./asset/img/doors/deadend.png">
+        <a-asset-item id="caca" src="./3Dmodels_aframe/laby23dmodels/cockroach.glb"></a-asset-item>
+
+        <!-- Mixin global -->
+        <a-mixin id="mosablue"
+                 geometry="primitive: box; depth: 0.02; height: 2; width: 4"
+                 material="src: #wt8; side: double; repeat: 3 3;">
+        </a-mixin>
+      </a-assets>
+
+      <!-- MURS -->
+      <a-entity position="1.2 1 -2"><a-box mixin="mosablue" scale="0.4 1 1"></a-box></a-entity>
+      <a-entity position="-1.2 1 -2"><a-box mixin="mosablue" scale="0.4 1 1"></a-box></a-entity>
+      <a-entity position="0 1 2" rotation="0 180 0"><a-box mixin="mosablue" scale="1 1 1"></a-box></a-entity>
+      <a-entity position="-2 1 0" rotation="0 90 0"><a-box mixin="mosablue"></a-box></a-entity>
+      <a-entity position="2 1 0" rotation="0 -90 0"><a-box mixin="mosablue"></a-box></a-entity>
+
+      <!-- MURS INTÉRIEURS -->
+      <a-box mixin="mosablue" position="-0.6 0.9 -0.8" scale="0.5 1 1"></a-box>
+      <a-box mixin="mosablue" position="-0.7 1 -0.381" scale="0.79 1 1" rotation="0 90 0"></a-box>
+      <a-box mixin="mosablue" position="0.831 1.45 0.153" scale="0.5 0.45 1" rotation="0 90 0"repeat="2.620 0.470"></a-box>
+      <a-box mixin="mosablue" position="-1.61 1.24 -1.322" scale="0.17 1 1"></a-box>
+      <a-box mixin="mosablue" position="-1.71 0.885 0.413" scale="0.12 1 1"></a-box>
+      <a-box mixin="mosablue" position="0.8 1 1.144" scale="0.3 1 1"></a-box>
+      <a-box mixin="mosablue" position="1.694 0.458 0.363" scale="0.15 0.47 1"></a-box>
+      <a-box mixin="mosablue" position="1.35 0.999 -0.722" scale="0.03 0.99 8"></a-box>
+      <!--<a-box mixin="mosablue" position="0.364 0.9 0.046" scale="0.3 1 1"></a-box>-->
+      <a-box mixin="mosablue" position="0.35 1 -1.93" scale="0.05 1 3.53" rotation="0 90 0"></a-box>
+      <a-box mixin="mosablue" position="0.417 1.45 -0.629" scale="0.34 1.71 1" rotation="0 90 0"></a-box>
+      <a-box mixin="mosablue" position="1.079 1.191 -0.655" scale="0.3 1.250 1.580"></a-box>
+
+      <!-- CAFARDS ANIMÉS -->
+      <a-entity gltf-model="#caca" animation-mixer scale="5 5 5" position="0.681 0 -0.5" rotation="0 90 0"></a-entity>
+      <a-entity gltf-model="#caca" animation-mixer scale="5 5 5" position="0.789 0 1.554" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#caca" animation-mixer scale="8 8 8" position="-1.23 0 -1.685" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#caca" animation-mixer scale="5 5 5" position="-1.1 0 -0.056" rotation="0 180 0"></a-entity>
+       <a-entity gltf-model="#caca" animation-mixer scale="5 5 5" position="0.681 0 -0.5" rotation="0 90 0"></a-entity>
+      <a-entity gltf-model="#caca" animation-mixer scale="5 5 5" position="0.789 0 1.554" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#caca" animation-mixer scale="8 8 8" position="-1.23 0 -1.685" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#caca" animation-mixer scale="7 7 7 " position="0.789 0.572 1.935" rotation="-75 104 -77"></a-entity>
+      <a-entity gltf-model="#caca" animation-mixer scale="7 7 7 " position="-0.002 1.455 0.8" rotation="0 0 0"animation="property: position; to: -0.002 0 0.8; dur: 2000; easing: easeInCubic"></a-entity>
+
+
+    
+      <!-- PANNEAU -->
+      <a-image src="#wrong" transparent="true" width="1" height="1" rotation="0 -90 0" position="-0.78 1.417 -1.515"></a-image>
+       <a-image src="#dead" transparent="true" width="1" height="1" rotation="0 0 0" position="-0.09 1 -0.773"scale="0.5 0.5 0.5 "></a-image>
+
+      <!-- SOL & PLAFOND -->
+      <a-plane src="#wt8" position="0 0 0" rotation="-90 0 0" width="4" height="4" material="repeat:4 4"></a-plane>
+      <a-plane src="#wt8" position="0 2 0" rotation="90 0 0" width="4" height="4" material="repeat:4 4" side="double"></a-plane>
+
+      <a-sky color="#ECECEC"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
