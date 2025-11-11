@@ -1,6 +1,9 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+
+    
   </head>
   <body>
     <a-scene>
@@ -13,6 +16,7 @@
         <!-- Modèle 3D -->
         <a-asset-item id="grass" src="./3Dmodels_aframe/whatamess/grass_vegitation_mix.glb"></a-asset-item>
         <a-asset-item id="papillon" src="./3Dmodels_aframe/whatamess/blue_butterfly_3d_model.glb"></a-asset-item>
+         <a-asset-item id="papilui" src="./3Dmodels_aframe/whatamess/animated_butterfly.glb"></a-asset-item>
       </a-assets>
 
       <!--  Sol -->
@@ -33,16 +37,21 @@
 
       <!--  Mur droit -->
       <a-plane src="#Basilic" position="0 2.971 0" rotation="-90 0 0" width="3" height="3"material="side:double"></a-plane>
-      <a-entity gltf-model="#grass" scale="2 2 2" position="-0.17 1.924 3.878" rotation="180 90 0"></a-entity>
+      <a-entity gltf-model="#grass" scale="2 2 2" position="0.123 3.026 0.124" rotation="180 90 0"></a-entity>
       <a-entity 
       light="type: spot; color: #783efe; angle: 45; intensity: 2; distance: 10; decay: -9.410; position:0.102 -0.25 1.822; rotation:34.37 0 0"
-      position="-0.17 2 2.878"
+      position="-0.17 3 2.878"
       rotation="-45 0 0">
       </a-entity>
       <a-entity gltf-model="#papillon" scale="1 1 1" position="0.544 1 0.878" rotation="-14.8 -37.4 0.870"></a-entity>
       <a-entity gltf-model="#papillon" scale="1 1 1" position="0.544 0.33 -0.728" rotation="-14.8 61.88 0.870"></a-entity>
       <a-entity gltf-model="#papillon" scale="0.5 0.5 0.5" position="-0.12 1 -0.728" rotation="-20.1 -64.9 -18.54"></a-entity>
-     <a-sky color="black"></a-sky>
+      <a-entity gltf-model="#papilui" animation-mixer="clip: *; timeOffset: 0" scale="0.3 0.3 0.3" position="-0.12 1.6 -0.728" rotation="-37 -150 -0.8"hue-rotate="hue: 120"></a-entity>
+      <a-entity gltf-model="#papilui" animation-mixer="clip: *; timeOffset: 500" scale="0.3 0.3 0.3"position="0.09 0.4 1.325" rotation="-37 -97 -0.8"></a-entity>
+      <a-entity gltf-model="#papilui" animation-mixer="clip: *; timeOffset: 1000" scale="0.1 0.1 0.1"position="0.091 2.601 0.651" rotation="1 97 175"></a-entity>
+      <a-entity gltf-model="#papilui" animation-mixer="clip: *; timeOffset: 1500" scale="0.1 0.1 0.1"position="-0.67 2.368 -0.924" rotation="-55 -111 -36"></a-entity>
+     <a-sky color="black"></a-sky><a-entity gltf-model="#papilui" animation-mixer="clip: *; timeOffset: 2000" scale="0.2 0.2 0.2"position="0.9 0.4 0.4" rotation="-48 -99 -167"></a-entity>
     </a-scene>
   </body>
 </html>
+
