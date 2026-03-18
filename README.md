@@ -10,7 +10,7 @@
 
 *  [VR360](skybox/skybox.html)
 
-*  [WEBGL] (WEBGL/Build/index.html)
+*  [WEBGL] (./WEBGL/index.html)
 
 
 
